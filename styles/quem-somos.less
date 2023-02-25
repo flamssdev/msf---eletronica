@@ -1,0 +1,173 @@
+main {
+    .quem-somos {
+        background-color: var(--verde-logo);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        padding-top: 70px;
+        
+        h2 {
+            margin-top: 50px;
+            font-size: 36px;
+            color: var(--branco);
+            font-weight: 700;
+        }
+
+        .container {
+            max-width: 1280;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 50px;
+            padding: 0 2% 50px;
+
+            .esquerda, .direita {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 585px;
+                gap: 40px;
+
+                p {
+                    font-size: 20px;
+                    color: var(--branco);
+                    font-weight: 600;
+                    text-align: justify;
+                }
+
+            }
+
+            .esquerda {
+                img {
+                    width: 525px;
+                    height: 305px; 
+                }
+            }
+
+            .direita {
+                img {
+                    width: 390px;
+                    height: 330px;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1280px) {
+    main {
+        .quem-somos {          
+            h2 {
+                margin-top: 50px;
+                font-size: 28px;
+
+            }
+    
+            .container {
+                .esquerda, .direita {
+                    gap: 20px;
+                    width: 400px;
+
+                    p {
+                        font-size: 16px;
+                    }
+                }
+    
+                .esquerda {
+                    img {
+                        width: 350px;
+                        height: 200px; 
+                    }
+                }
+    
+                .direita {
+                    img {
+                        width: 260px;
+                        height: 220px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    main {
+        .quem-somos {          
+            h2 {
+                margin-top: 50px;
+                font-size: 28px;
+
+            }
+    
+            .container {
+                flex-direction: column;
+                .esquerda, .direita {
+                    gap: 80px;
+                    width: 580px;
+
+                    p {
+                        font-size: 16px;
+                    }
+                }
+    
+                .esquerda {
+                    img {
+                        width: 350px;
+                        height: 200px; 
+                    }
+                }
+    
+                .direita {
+                    margin-top: 30px;
+                    img {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        .quem-somos {
+            padding-top: 20px;
+
+            h2 {
+                margin-top: 0px;
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 610px) {
+    main {
+        .quem-somos {          
+            h2 {
+                font-size: 28px;
+
+            }
+    
+            .container {
+                flex-direction: column;
+                .esquerda, .direita {
+                    gap: 50px;
+                    max-width: 350px;
+                }
+
+    
+                .direita {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}

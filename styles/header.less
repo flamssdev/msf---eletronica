@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --verde-logo: #00383B;
+    --branco: #ffffff;
+}
+
+body {
+    position: relative;
+}
+header {
+    width: 100%;
+    background-color: var(--verde-logo);
+    display: flex;
+    justify-content: center;
+    
+
+    .container-superior {
+        width: 100%;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 16px;
+        background-color: var(--verde-logo);
+        position: fixed;
+        
+        .menu-superior {
+            ul {
+                display: flex;
+                gap: 30px;
+                li {
+                    list-style: none;
+
+                    a {
+                        text-decoration: none;
+                        color: var(--branco);
+                    } 
+
+                    &:nth-child(2), &:nth-child(3) {
+                        list-style: disc;
+                        color: var(--branco);
+                    }
+                }
+            }
+        }
+
+        .contato-home-superior {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+    
+            span {
+                color: var(--branco);
+            }
+    
+            a {
+                color: var(--branco);
+                text-decoration: none;
+            }
+        }
+    }
+
+    .container-lateral {
+        display: none;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    header {
+        .container-superior {
+            justify-content: space-between;
+            padding: 0 2%;
+            font-size: 16px;
+            
+            .menu-superior {
+                ul {
+                    gap: 15px;
+                    li {    
+                        &:nth-child(2), &:nth-child(3) {
+                            list-style: none;
+                        }
+                    }
+                }
+            }
+    
+            .contato-home-superior {
+                gap: 15px;
+                
+                span {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        display: block;
+        position: relative;
+        
+        .container-superior {
+            display: none;
+        }
+
+        .abrir-menu {
+            position: fixed;
+            top: 20px;
+            left: 10px;
+            background-color: black;
+            width: 30px;
+            height: 5px;
+            border: none;
+            display: inline-block;
+            cursor: pointer;
+
+            &::after, &::before {
+                content: "";
+                position: absolute;
+                background-color: black;
+                width: 30px;
+                height: 5px;
+            }
+
+            &::after {
+                top: 10px
+            }
+
+            &::before {
+                top: -10px;
+            }
+        }
+
+        .container-lateral {
+            flex-direction: column;
+            padding: 2% 0;
+            justify-content: space-between;
+            width: 180px;
+            height: 100%;
+            background-color: var(--verde-logo);
+            position: fixed;
+
+            .fechar-menu {
+                position: absolute;
+                right: 5px;
+                top: 5px;
+                font-size: 20px;
+                font-weight: 700;
+                color: var(--verde-logo);
+                padding: 8px 15px;
+                background-color: var(--branco);
+                border-radius: 50%;
+            }
+
+            .top {
+                .menu-lateral {
+                    ul {
+                        
+                        li {
+                            list-style: none;
+                            margin: 20px;
+        
+                            a {
+                                text-decoration: none;
+                                color: var(--branco);
+                            }
+                        }
+                    }
+                }
+            }
+    
+            .contato-home-lateral {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                padding: 0 20px;
+
+                span {
+                    color: var(--branco);
+                }
+        
+                a {
+                    color: var(--branco);
+                    text-decoration: none;
+                }
+
+                .redes-sociais {
+                    width: 100%;
+                    display: flex;
+                    gap: 40px;
+                }
+            }
+        }
+    }
+}

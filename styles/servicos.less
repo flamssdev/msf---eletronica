@@ -1,0 +1,195 @@
+main {
+    .servicos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 110px 0;
+
+        h2, h4, span {
+            color: var(--verde-logo);
+            max-width: 1000px;
+            text-align: center;
+            padding: 0 2%;
+        }
+
+        h2 {
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        h4 {
+            font-size: 20px;
+            font-weight: 500;
+            margin-top: 20px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            gap: 50px;
+            margin-top: 50px;
+        
+
+            .esquerda, .direita {
+                display: flex;
+                flex-direction: column;
+                
+                img {
+                    width: 100%;
+                    height: 35px;
+                    margin: 5px 0;
+                }
+
+                .tipos-servico {
+                    width: 525px;
+                    text-align: center;
+
+                    span {
+                        display: inline-block;
+                    }
+
+                    .titulo {
+                        font-size: 26px;
+                        font-weight: 700;
+                        margin-bottom: 20px;
+                    }
+        
+                    .descricao {
+                        font-size: 20px;
+                        font-weight: 500;
+                    }
+                }
+                
+            }
+
+            .esquerda{
+                .tipos-servico {
+                    margin-left: 20px;
+                    .descricao {
+                        text-align: left;
+                    }
+                }
+
+                .restauracao {
+                    margin-top: -20px;
+                }
+            }
+
+            .direita {
+                align-items: flex-end;
+
+                .tipos-servico {
+                    margin-right: 20px;
+                    .descricao {
+                        text-align: right;
+                    }
+                }
+
+                .manutencao, .contratos {
+                    margin-top: -20px;
+                }
+                
+                .linha-cinco {
+                    width: 65%;
+                }
+            }            
+        }
+    }
+}
+
+
+@media (max-width: 1280px) {
+    main {
+        .servicos { 
+            .container {
+                gap: 50px;
+
+                .esquerda, .direita {
+                    width: 50%;
+    
+                    .tipos-servico {
+                        width: 90%;
+    
+                        .titulo {
+                            font-size: 24px;
+                        }
+            
+                        .descricao {
+                            font-size: 20px;
+                        }
+                    }        
+                }          
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    main {
+        .servicos {    
+            .container {
+                gap: 30px;
+
+                .esquerda, .direita {
+                    width: 50%;
+    
+                    .tipos-servico {
+                        width: 90%;
+    
+                        .titulo {
+                            font-size: 20px;
+                        }
+            
+                        .descricao {
+                            font-size: 16px;
+                        }
+                    }        
+                }          
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        .servicos {    
+            padding-top: 50px;
+            h2 {
+                font-size: 28px;
+            }
+    
+            h4 {
+                font-size: 16px;
+            }
+            .container {
+                flex-direction: column;
+                align-items: center;
+                gap: 0;
+                margin-top: 20px;
+
+                .esquerda, .direita {
+                    width: 100%;
+                    align-items: center;
+
+                    img {
+                        display: none;
+                    }
+    
+                    .tipos-servico {
+                        margin: 30px 0 0;    
+                        .titulo {
+                            font-size: 20px;
+                        }
+            
+                        .descricao {
+                            font-size: 16px;
+                            text-align: center;
+                        }
+                    }        
+                }
+            }
+        }
+    }
+}

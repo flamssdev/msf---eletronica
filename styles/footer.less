@@ -1,0 +1,102 @@
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+        width: 100%;
+        background-color: var(--verde-logo);
+        padding: 50px 4%;
+        
+        .container-contato {
+            display: flex;
+            justify-content: end;
+            flex: 1;
+
+            .contato-footer {
+
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+                gap: 20px;
+    
+                .instagram {
+                    a {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 15px;
+
+                        text-decoration: none;
+                        color: var(--branco);
+                    }
+                }
+
+                .copyright {
+                    color: var(--branco);
+                }
+            }
+        }
+
+        .objetivos {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            span {
+                max-width: 500px;
+                width: 100%;
+                text-align: justify;
+                color: var(--branco);
+            }
+        }
+    }
+
+    .autor {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background-color: black;
+        color: white;
+    }
+}
+
+
+@media (max-width: 900px) {
+    footer {
+        .container {
+            .container-contato {
+                a {
+                    width: 300px;
+
+                    .whatts-footer {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    footer {
+        .container {
+            flex-direction: column-reverse;
+            .container-contato {
+                justify-content: center;
+            }
+            .objetivos {
+                align-items: center;
+            }
+        }
+
+        
+    }
+}
